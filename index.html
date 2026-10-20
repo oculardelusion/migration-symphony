@@ -51,7 +51,7 @@
   <button class="iconbtn" id="playBtn">▶</button>
   <div id="datelabel">1 jan</div>
   <button class="iconbtn" id="muteBtn">♪</button>
-  <label id="emphWrap" title="Seasonal emphasis" style="display:flex;align-items:center;gap:8px">season <input type="range" id="emph" min="0" max="1" step="0.05" value="0.6" style="width:90px"></label>
+  <label id="emphWrap" title="Season. Left: each species for its whole stay. Right: in proportion to how often it was reported each month." style="display:flex;align-items:center;gap:8px">season <input type="range" id="emph" min="0" max="1" step="0.05" value="0.6" style="width:90px"></label>
 </div>
 
 <script>
@@ -59,8 +59,8 @@ const CLEAN = false;        // true in the video build: no controls, dial at 1, 
 if (!CLEAN) {   // the online version: a short introduction for people arriving from the QR code on the wall
   const h = document.getElementById('hint'); h.classList.add('intro');
   h.innerHTML = '<div class="t">Migration Symphony</div><div class="s">A year of birds at RSPB Frampton Marsh, 2025</div>' +
-    'Each cloud is a species. Each shape is a group of birds. Watch them arrive, stay and leave. Only the migrating birds make sound.' +
-    '<div class="n">Best with headphones. On an iPhone, turn silent mode off.<br>The season dial and play button are along the bottom.</div>' +
+    'Each shape is a group of birds, and each species has its own flock of marks. Watch them arrive, stay and leave. Only the migrating birds make sound.' +
+    '<div class="n">Best with headphones. On an iPhone, turn silent mode off.<br>Along the bottom: play and pause, the date, a sound on/off button (\u266a), and a season slider. Left shows each species for its whole stay; right shows it in proportion to how often it was reported.</div>' +
     '<div class="go">tap to begin</div><div class="c">Karen Frances Eng &middot; GroundWork Gallery residency, 2026</div>';
 }
 const TIME_SCALE = 0.8;     // one notch slower overall (motion contrast unchanged: every clock is scaled together)
